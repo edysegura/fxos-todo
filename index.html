@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="todoListApp">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/headers.css">
+<link rel="stylesheet" href="css/input_areas.css">
+<link rel="stylesheet" href="css/util.css">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/cross_browser.css">
+<link rel="stylesheet" href="css/drawer.css">
+<link rel="stylesheet" href="css/style.css">
+<title>TODO List</title>
+
+</head>
+<body>
+
+<section id="index" data-position="current">
+  <section id="drawer" role="region">
+    <header class="fixed">
+      <h1>TODO List</h1>
+    </header>
+    <article ng-controller="TodoListController"
+     class="content scrollable header">
+      
+      <input id="task-field" type="text" ng-model="description" />
+      <button ng-click="addTask()">Add</button>
+
+			<p>
+				<span ng-bind="remaining()">0</span> of 
+				<span ng-bind="tasks.length">0</span> remaining
+				[ <a href="#" ng-click="archive()">archive</a> ]
+			</p>
+			
+      <ul>
+      	<li ng-repeat="task in tasks">
+      		<label ng-click="update()">
+	      		<input type="checkbox" ng-model="task.done" />
+	      		<span ng-bind="task.description"></span>
+      		</label>
+      	</li>
+      </ul>
+
+    </article>
+  </section>
+</section>
+
+<script src="js/vendor/angular.min.js"></script>
+<script src="js/todoListApp.js"></script>
+<script src="js/controllers/TodoListController.js"></script>
+<script src="js/services/TodoListServices.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+/* Put your CSS HERE */
+
+#task-field {
+	width: 80%;
+	float: left;
+}
+
+#task-field, button {
+	margin-top: 15px;
+}
+
+button {
+	width: 20%;
+} 
+
+input:checked ~ span {
+	text-decoration: line-through;
+	color: #ccc;
+};

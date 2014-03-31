@@ -1,0 +1,15 @@
+{
+  "version": "0.1",
+  "name": "TODO List",
+  "launch_path": "/index.html",
+  "description": "A simple app to keep on track with tasks",
+  "icons": {
+    "128": "/images/icon.png"
+  },
+  "developer": {
+    "name": "Edy Segura",
+    "url": "http://www.edy.com.br"
+  },
+  "installs_allowed_from": ["*"],
+  "default_locale": "en"
+}
